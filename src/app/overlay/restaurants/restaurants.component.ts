@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { RestaurantsService } from '../../services/restaurants.service';
 
 @Component({
     selector: 'restaurants',
@@ -6,10 +7,26 @@ import { Component } from '@angular/core';
     styleUrls: ['./restaurants.component.scss']
 })
 export class RestaurantsComponent{
-    restaurants: Array<any> = 
-    [
-        {name: 'Tao', rank: 1, score: '92%'},
-        {name: 'Kelder 65', rank: 2, score: '82%'},
-        {name: 'Dunya doner', rank: 3, score: '72%'},
-    ]
+    @Output() select: EventEmitter<any> = new EventEmitter();
+    constructor(private restaurantsService: RestaurantsService){
+        this.restaurants = this.getTopThree(this.restaurantsService.getRestaurants());
+        console.log(this.restaurants);
+    }
+    restaurants: Array<any> = [];
+
+    getTopThree = (restaurants: Array<any>) => {
+        var tempRestaurants = []
+        for (var i = 1; i <= 3; i++){
+            var takenIndex = Math.floor(Math.random() * restaurants.length);
+            tempRestaurants.push(restaurants[takenIndex]);
+            restaurants.splice(takenIndex, 1);
+            tempRestaurants[i-1].rank = i;
+            tempRestaurants[i-1].score = (100 - 8 * i);
+        };
+        return tempRestaurants;
+    };
+
+    notifySelected = ($event) => {
+        this.select.emit($event);
+    }
 }

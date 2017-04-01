@@ -1,3 +1,3 @@
 <div class="restaurants-container">
-    <restaurant *ngFor="let restaurant of restaurants" [data]="restaurant"></restaurant>
+    <restaurant *ngFor="let restaurant of restaurants" [data]="restaurant" (click)="notifySelected(restaurant.id)"></restaurant>
 </div>

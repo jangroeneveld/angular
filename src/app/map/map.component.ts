@@ -9,7 +9,7 @@ declare var ol: any;
 })
 export class MapComponent implements OnInit{
     ol: any;
-    blurred: boolean = false;
+    blurred: boolean = true;
     constructor(){}
 
     ngOnInit(){

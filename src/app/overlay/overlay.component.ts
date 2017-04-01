@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class OverlayComponent{
 
+
+    onSelect = ($event) => {
+        console.log($event)
+    }
 }
