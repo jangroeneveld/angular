@@ -1,0 +1,29 @@
+@import '../../../../styles/colors.scss';
+
+.restaurant{
+    width: 90%;
+    padding: 0 5%;
+    height: 100px;
+    font-size: 22pt;
+
+    .ranking{
+        float: left;
+        width: 10%;
+        font-weight: 700;
+    }
+
+    .name{
+        float: left;
+        width: 80%;
+    }
+
+    .score{
+        float: left;
+        width: 60px;
+        height: 60px;
+        font-weight: 200;
+        border-radius: 50%;
+        border: 1px solid $offwhite;
+        box-sizing: border-box;
+    }
+}

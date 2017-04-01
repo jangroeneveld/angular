@@ -7,13 +7,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
-import { HomeComponent } from './home/home.component';
+import 'hammerjs';
+
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { MapComponent } from './map/map.component';
+import { OverlayComponent } from './overlay/overlay.component';
+import { RestaurantsComponent } from './overlay/restaurants/restaurants.component';
+import { RestaurantComponent } from './overlay/restaurants/restaurant/restaurant.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		HomeComponent
+		MapComponent,
+		OverlayComponent,
+		RestaurantsComponent,
+		RestaurantComponent
 	],
 	imports: [
 		BrowserModule,
