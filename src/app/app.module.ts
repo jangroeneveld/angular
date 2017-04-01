@@ -17,7 +17,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 	],
 	imports: [
 		BrowserModule,
-		MaterialModule,
+		MaterialModule.forRoot(),
 		FormsModule,
 		ReactiveFormsModule,
 		HttpModule,
