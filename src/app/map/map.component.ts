@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Interactions } from './Interactions';
+import { PubSub } from '../../shared/PubSub';
+import { RestaurantsService } from '../services/restaurants.service';
 declare var ol: any;
 
 @Component({
@@ -9,8 +11,14 @@ declare var ol: any;
 })
 export class MapComponent implements OnInit{
     ol: any;
+    interactions: Interactions;
+    restaurants: Array<any>;
     blurred: boolean = true;
-    constructor(){}
+    constructor(private pubsub: PubSub, private restaurantsService: RestaurantsService){
+        this.restaurants = restaurantsService.getRestaurants();
+        this.pubsub.on('showRestaurant', this.toggleBlur);
+        this.pubsub.on('showRestaurant', this.createRestaurantIcon);
+    }
 
     ngOnInit(){
         var map = new ol.Map({
@@ -27,6 +35,17 @@ export class MapComponent implements OnInit{
             })
         });
 
-        new Interactions(map);
+        this.interactions = new Interactions(map);
+    }
+
+    toggleBlur = (data) => {
+        if (data) {
+            this.blurred = false;
+        }
+    }
+
+    createRestaurantIcon = (data) => {
+        var restaurant = this.restaurants.find(r => { return r.id == data });
+        this.interactions.createFeature(restaurant.lat, restaurant.lon);
     }
 }

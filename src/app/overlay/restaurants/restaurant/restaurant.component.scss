@@ -1,29 +1,30 @@
 @import '../../../../styles/colors.scss';
 
 .restaurant{
-    width: 90%;
-    padding: 0 5%;
-    height: 100px;
+    cursor: pointer;
+    margin: 10px 50px;
+    max-height: 60px;
     font-size: 22pt;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+    &.selected{
+        max-height: 110px;
+    }
 
     .ranking{
-        float: left;
-        width: 10%;
         font-weight: 700;
     }
 
-    .name{
-        float: left;
-        width: 80%;
-    }
-
     .score{
-        float: left;
-        width: 60px;
         height: 60px;
         font-weight: 200;
-        border-radius: 50%;
         border: 1px solid $offwhite;
         box-sizing: border-box;
+    }
+
+    .details{
+        padding-top: 10px;
+        font-size: 12pt;
     }
 }

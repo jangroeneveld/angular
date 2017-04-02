@@ -1,6 +1,6 @@
-<div class="overlay">
-    <div class="title">
+<div class="overlay" [class.downsized]="downsized">
+    <div class="title" [class.no-height]="downsized">
         de<strong>Smaak</strong>van<strong>Leeuwarden</strong>
     </div>
-    <restaurants (select)="onSelect($event)"></restaurants>
+    <restaurants></restaurants>
 </div>

@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { RestaurantsService } from '../../services/restaurants.service';
+import { PubSub } from '../../../shared/PubSub';
 
 @Component({
     selector: 'restaurants',
@@ -8,9 +9,8 @@ import { RestaurantsService } from '../../services/restaurants.service';
 })
 export class RestaurantsComponent{
     @Output() select: EventEmitter<any> = new EventEmitter();
-    constructor(private restaurantsService: RestaurantsService){
+    constructor(private restaurantsService: RestaurantsService, private pubsub: PubSub){
         this.restaurants = this.getTopThree(this.restaurantsService.getRestaurants());
-        console.log(this.restaurants);
     }
     restaurants: Array<any> = [];
 
@@ -27,6 +27,6 @@ export class RestaurantsComponent{
     };
 
     notifySelected = ($event) => {
-        this.select.emit($event);
+        this.pubsub.fire('selectedRestaurant', $event);
     }
 }

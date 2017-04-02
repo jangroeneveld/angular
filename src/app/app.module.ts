@@ -19,6 +19,7 @@ import { RestaurantsComponent } from './overlay/restaurants/restaurants.componen
 import { RestaurantComponent } from './overlay/restaurants/restaurant/restaurant.component';
 
 //Services
+import { PubSub } from '../shared/PubSub';
 import { RestaurantsService } from './services/restaurants.service';
 
 @NgModule({
@@ -38,6 +39,7 @@ import { RestaurantsService } from './services/restaurants.service';
 		RouterModule.forRoot(rootRouterConfig, { useHash: true })
 	],
 	providers: [
+		PubSub,
 		RestaurantsService
 	],
 	bootstrap: [AppComponent]

@@ -24,4 +24,11 @@ export class Interactions{
         this.restaurantSource.addFeature(feature2);
         this.restaurantSource.addFeature(feature3);
     }
+
+    createFeature = (lat: number, lon: number) => {
+        var feature = new ol.Feature({
+            geometry: new ol.geom.Point(ol.proj.transform([lat,lon], 'EPSG:4326', 'EPSG:3857')),
+        });
+        this.restaurantSource.addFeature(feature);
+    }
 }
