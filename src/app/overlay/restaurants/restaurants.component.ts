@@ -10,7 +10,9 @@ import { PubSub } from '../../../shared/PubSub';
 export class RestaurantsComponent{
     @Output() select: EventEmitter<any> = new EventEmitter();
     constructor(private restaurantsService: RestaurantsService, private pubsub: PubSub){
+        setTimeout( () => {
         this.restaurants = this.getTopThree(this.restaurantsService.getRestaurants());
+        }, 1000);
     }
     restaurants: Array<any> = [];
 
@@ -23,6 +25,7 @@ export class RestaurantsComponent{
             tempRestaurants[i-1].rank = i;
             tempRestaurants[i-1].score = (100 - 8 * i);
         };
+        this.pubsub.fire('topThreeChosen', tempRestaurants);
         return tempRestaurants;
     };
 

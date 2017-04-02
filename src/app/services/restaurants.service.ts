@@ -24,7 +24,6 @@ export class RestaurantsService {
             { id: 18, name: "TOTT", cuisine: "Wereldkeuken", lon: 53.207, lat: 5.807 },
             { id: 19, name: "De Vrouwenpoort", cuisine: "Regionaal", lon: 53.208, lat: 5.808 },
             { id: 20, name: "Onder de kelders", cuisine: "Wereldkeuken", lon: 53.209, lat: 5.809 }
-
         ];
     }
 }

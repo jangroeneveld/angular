@@ -14,14 +14,14 @@ export class MapComponent implements OnInit{
     interactions: Interactions;
     restaurants: Array<any>;
     blurred: boolean = true;
+    map: any;
     constructor(private pubsub: PubSub, private restaurantsService: RestaurantsService){
         this.restaurants = restaurantsService.getRestaurants();
         this.pubsub.on('showRestaurant', this.toggleBlur);
-        this.pubsub.on('showRestaurant', this.createRestaurantIcon);
     }
 
     ngOnInit(){
-        var map = new ol.Map({
+        this.map = new ol.Map({
             target: 'map',
             layers: [
                 new ol.layer.Tile({
@@ -35,7 +35,13 @@ export class MapComponent implements OnInit{
             })
         });
 
-        this.interactions = new Interactions(map);
+        this.map.on('click', (event) => {
+            this.map.forEachFeatureAtPixel(event.pixel, (feature) => {
+                console.log(feature);
+            })
+        })
+
+        this.interactions = new Interactions(this.map, this.pubsub);
     }
 
     toggleBlur = (data) => {
@@ -44,8 +50,10 @@ export class MapComponent implements OnInit{
         }
     }
 
+    
+
     createRestaurantIcon = (data) => {
         var restaurant = this.restaurants.find(r => { return r.id == data });
-        this.interactions.createFeature(restaurant.lat, restaurant.lon);
+        this.interactions.createFeature(restaurant);
     }
 }
