@@ -42,6 +42,7 @@ export class MapComponent implements OnInit{
         })
 
         this.interactions = new Interactions(this.map, this.pubsub);
+        window.navigator.geolocation.getCurrentPosition(this.interactions.drawUserLocation);
     }
 
     toggleBlur = (data) => {

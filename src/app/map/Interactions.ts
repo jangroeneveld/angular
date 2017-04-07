@@ -6,11 +6,13 @@ export class Interactions{
     ol: any;
     restaurantSource: any;
     restaurantFeature: any;
+    map: any;
 
     constructor(map, private pubsub: PubSub) {
+        this.map = map;
         this.restaurantSource = new ol.source.Vector({});
         this.pubsub.on('topThreeChosen', this.drawTopThree);
-        map.addLayer(
+        this.map.addLayer(
             new ol.layer.Vector({
                 source: this.restaurantSource,
                 zIndex: 10,
@@ -36,5 +38,13 @@ export class Interactions{
     drawTopThree = restaurants => {
         console.log('hi');
         restaurants.forEach(r => { this.createFeature(r)});
+    }
+
+    drawUserLocation = (location) => {
+        var feature = new ol.Feature({
+            name: 'user location',
+            geometry: new ol.geom.Point(ol.proj.transform([location.coords.longitude, location.coords.latitude], 'EPSG:4326', 'EPSG:3857')),
+        });
+        this.restaurantSource.addFeature(feature);
     }
 }
