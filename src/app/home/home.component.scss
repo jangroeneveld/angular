@@ -32,8 +32,8 @@
     }
 
     .block-container{
-        position: relative;
-        top: 70vh;
+        position: absolute;
+        top: calc(100vh - 109px);
         width: 100%;
 
         .block{
@@ -48,7 +48,7 @@
             transition: border 0.3s;
 
             &:hover{
-                border-top: 4px solid $orange;
+                border-top: 4px solid $orange-default;
             }
 
             .title{
