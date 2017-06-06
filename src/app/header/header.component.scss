@@ -1,22 +1,47 @@
 @import '../../styles/colors.scss';
 
-.header-component{
+.header-container{
+    position: fixed;
+    top: 0; left: 0;
     width: 100vw;
     max-width: 100%;
-    height: 100px;
+    height: 60px;
     background-color: $offwhite;
+    text-align: center;
 
     .button {
         float: left;
-        width: 20%;
+        width: 12%;
+        margin: 0 4%;
+        line-height: 58px;
         border-bottom: 0px solid transparent;
+        cursor: pointer;
+        outline: none;
+        background: transparent;
+        box-sizing: border-box;
+        transition: border 0.3s;
 
         &:hover{
-            border-bottom: 1px solid $orange;
+            border-bottom: 2px solid $orange;
+        }   
+
+        &.active {
+            border-bottom: 2px solid $orange;
         }
     }
     .user-picture{
         width: 20%;
         float: left;
+        
+        .picture{
+            width: 100px;
+            height: 100px;
+            background-color: $orange;
+            position: relative;
+            left: 50%;
+            border: 2px solid $orange;
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
     }
 }
