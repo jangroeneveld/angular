@@ -13,10 +13,12 @@ import 'hammerjs';
 
 //Components
 import { AppComponent } from './app.component';
-import { MapComponent } from './map/map.component';
-import { OverlayComponent } from './overlay/overlay.component';
-import { RestaurantsComponent } from './overlay/restaurants/restaurants.component';
-import { RestaurantComponent } from './overlay/restaurants/restaurant/restaurant.component';
+import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
+import { BookingsComponent } from './sub-pages/bookings/bookings.component';
+import { InformationComponent } from './sub-pages/information/information.component';
+import { RecommendationsComponent } from './sub-pages/recommendations/recommendations.component';
+import { SettingsComponent } from './sub-pages/settings/settings.component';
 
 //Services
 import { PubSub } from '../shared/PubSub';
@@ -25,10 +27,12 @@ import { RestaurantsService } from './services/restaurants.service';
 @NgModule({
 	declarations: [
 		AppComponent,
-		MapComponent,
-		OverlayComponent,
-		RestaurantsComponent,
-		RestaurantComponent
+		BookingsComponent,
+		HeaderComponent,
+		HomeComponent,
+		InformationComponent,
+		RecommendationsComponent,
+		SettingsComponent
 	],
 	imports: [
 		BrowserModule,

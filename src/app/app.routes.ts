@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { MapComponent } from './map/map.component';
+import { HomeComponent } from './home/home.component';
 
 export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: MapComponent }
+  { path: 'home', component: HomeComponent }
 ];
 
