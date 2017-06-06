@@ -1,0 +1,21 @@
+<div class="settings-background"></div>
+<div class="spacer"> </div>
+<div class="settings-container">
+    <div class="travel-company">
+        <div class="title">Reizgezelschap</div>
+        <div class="item">{{user.mainUser.firstName}} {{user.mainUser.lastName}} ({{user.mainUser.age}}/{{user.mainUser.sex}})</div>
+        <div class="item" *ngFor="let company of user.userCompany">
+            {{company.firstName}} {{company.lastName}} ({{company.age}}/{{company.sex}})
+        </div>
+    </div>
+    <div class="spacer"> </div>
+    <div class="cars">
+        <div class="title">Auto's</div>
+        <div class="item" *ngFor="let car of user.cars">{{car}}</div>
+    </div>
+    <div class="spacer"> </div>
+    <div class="bookings">
+        <div class="title">Boekingen</div>
+        <div class="item" *ngFor="let booking of user.bookings">{{booking}}</div>
+    </div>
+</div>

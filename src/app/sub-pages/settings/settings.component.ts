@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../services/user.service';
 
 @Component({
     selector: 'settings',
@@ -6,7 +7,8 @@ import { Component } from '@angular/core';
     styleUrls: ['settings.component.scss']
 })
 export class SettingsComponent{
-    consturctor () {
-        
+    user;
+    constructor (private userService: UserService) {
+        this.user = userService.getUser();
     }
 }

@@ -16,10 +16,12 @@ export class PersonModel {
     firstName: string = "John";
     lastName: string = "Doe"
     age: number = 0;
-    constructor(firstName: string, lastName: string, age: number){
+    sex: string = "M";
+    constructor(firstName: string, lastName: string, age: number = 0, sex: string = "M"){
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
+        this.sex = sex;
         return this;
     }
 }

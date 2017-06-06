@@ -3,13 +3,15 @@ import { PersonModel, UserModel } from '../models/UserModels';
 
 @Injectable()
 export class UserService {
+    user: UserModel;
+
     getUser() {
-        return  new UserModel(
-            new PersonModel("Toon", "Verberg", 24),
+        return this.user ? this.user : new UserModel(
+            new PersonModel("Toon", "Verberg", 34, "M"),
             [
-                new PersonModel("Inez", "Verberg", 22),
-                new PersonModel("Aine", "Verberg", 3),
-                new PersonModel("André", "Verberg", 1)
+                new PersonModel("Inez", "Verberg", 32, "F"),
+                new PersonModel("Aine", "Verberg", 3, "F"),
+                new PersonModel("André", "Verberg", 1, "M")
             ],
             ["AU-TO-01"],
             []
