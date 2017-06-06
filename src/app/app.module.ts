@@ -36,7 +36,7 @@ import { RestaurantsService } from './services/restaurants.service';
 	],
 	imports: [
 		BrowserModule,
-		MaterialModule.forRoot(),
+		MaterialModule,
 		FormsModule,
 		ReactiveFormsModule,
 		HttpModule,
