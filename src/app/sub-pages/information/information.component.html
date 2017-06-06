@@ -1,24 +1,24 @@
 <div class="information-background"></div>
 <div class="spacer"> </div>
 <div class="information-container">
-    <div class="travel-company">
-        <div class="title">Reizgezelschap</div>
-        <div class="item">{{user.mainUser.firstName}} {{user.mainUser.lastName}} ({{user.mainUser.age}}/{{user.mainUser.sex}})</div>
+<div class="travel-company">
+        <div class="title">REISGEZELSCHAP</div>
+        <div class="item">{{user.mainUser.firstName | uppercase}} {{user.mainUser.lastName | uppercase}} ({{user.mainUser.age}}/{{user.mainUser.sex | uppercase}})</div>
         <div class="item" *ngFor="let company of user.userCompany">
-            {{company.firstName}} {{company.lastName}} ({{company.age}}/{{company.sex}})
+            {{company.firstName | uppercase}} {{company.lastName | uppercase}} ({{company.age}}/{{company.sex | uppercase}})
         </div>
     </div>
     <div class="spacer"> </div>
     <div class="cars">
-        <div class="title">Auto's</div>
+        <div class="title">AUTO'S</div>
         <div class="item" *ngFor="let car of user.cars">{{car}}</div>
     </div>
     <div class="spacer"> </div>
     <div class="bookings">
-        <div class="title">Boekingen</div>
-        <div class="item" *ngFor="let booking of user.bookings">{{booking}}</div>
+        <div class="title">BOEKINGEN</div>
+        <div class="item" *ngFor="let booking of user.bookings">{{booking | uppercase}}</div>
     </div>
     <div class="spacer"> </div>
-    <div class="button button-logout">Uitloggen</div>
+    <div class="button button-logout">UITLOGGEN</div>
     <div class="spacer"> </div>
 </div>
