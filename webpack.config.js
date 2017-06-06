@@ -16,7 +16,7 @@ var webpackConfig = {
 	plugins: [
 		new webpack.ContextReplacementPlugin(
 			/angular(\\|\/)core(\\|\/)@angular/,
-			path.resolve(__dirname, '../src'),
+			path.resolve(__dirname, '../src')
 		)
 	],
 
