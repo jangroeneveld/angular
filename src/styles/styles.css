@@ -1,1 +1,8 @@
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+@font-face {
+    font-family: JosefinSans Regular;
+    src: url(../fonts/JosefinSans/JosefinSans-Regular.ttf);
+}
+
+* { 
+	font-family: JosefinSans Regular;
+}
