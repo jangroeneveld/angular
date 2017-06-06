@@ -1,0 +1,45 @@
+@import '../../../styles/colors';
+
+.bookings-background{
+    position: fixed;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background: skyblue;
+    z-index: -1;
+}
+
+.spacer{
+    width: 100%;
+    content: "";
+    height: 120px;
+}
+
+.bookings-container{
+    text-align: center;
+    width: 100%;
+
+    .title{
+        margin: 40px;
+        font-weight: 700;
+        font-size: 16pt;
+    }
+
+    .item{
+        color: white;
+    }
+    
+    .button{
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+        &.button-logout{
+            color: $pale-light;
+            height: 40px;
+            line-height: 40px;
+            background: $orange-default;
+            width: 200px;
+            border-radius: 20px;
+        }
+    }
+}
