@@ -23,6 +23,7 @@ import { SettingsComponent } from './sub-pages/settings/settings.component';
 //Services
 import { PubSub } from '../shared/PubSub';
 import { RestaurantsService } from './services/restaurants.service';
+import { UserService } from './services/user.service';
 
 @NgModule({
 	declarations: [
@@ -44,7 +45,8 @@ import { RestaurantsService } from './services/restaurants.service';
 	],
 	providers: [
 		PubSub,
-		RestaurantsService
+		RestaurantsService,
+		UserService
 	],
 	bootstrap: [AppComponent]
 })

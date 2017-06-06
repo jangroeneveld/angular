@@ -8,6 +8,7 @@
     height: 60px;
     background-color: $offwhite;
     text-align: center;
+    z-index: 1000;
 
     .button {
         float: left;
@@ -32,6 +33,7 @@
     .user-picture{
         width: 20%;
         float: left;
+        outline: none;
         
         .picture{
             width: 100px;
@@ -42,6 +44,7 @@
             border: 2px solid $orange;
             border-radius: 50%;
             transform: translateX(-50%);
+            outline: none;
         }
     }
 }
