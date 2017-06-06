@@ -39,7 +39,8 @@
         .picture{
             width: 100px;
             height: 100px;
-            background-color: $orange-default;
+            background: url("../images/portraits/portrait1.jpg") center center no-repeat;
+            background-size: cover;
             position: relative;
             left: 50%;
             border: 2px solid $orange-default;
