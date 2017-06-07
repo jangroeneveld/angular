@@ -5,12 +5,13 @@
     background-color: $pale-medium;
 
     .section{
-        box-shadow: 0px 5px 8px $grey-medium;
+        box-shadow: 0px 3px 5px $shadow;
 
         &.head-image{
-            background: url("../../../images/main-image.jpg") center center no-repeat;
+            background: linear-gradient(transparent, rgba(0,0,0,0.4)), url("../../../images/main-image.jpg") center center no-repeat;
             background-size: cover;
             height: 300px;
+            position: relative;
 
             .previous-icon{
                 position: relative;
@@ -20,24 +21,58 @@
                 left: 30px;
                 background: url("../../../images/icons/Arrow_left_white.svg") center center no-repeat;
                 background-size: 40%;
-                border: 1px solid $pale-light;
+                border: 2px solid $pale-light;
                 border-radius: 50%;
                 cursor: pointer;
                 transform: translateY(-50%);
             }
 
             .quote{
-                float: right;
+                position: absolute;
+                bottom: 30px; right: 30px;
                 text-align: right;
                 font-size: 36pt;
+                vertical-align: bottom;
                 color: $pale-light;
-
+            
                 &:before{
                     content: "\"";
                 }
 
                 &:after{
                     content: "\"";
+                }
+            }
+            .calls-to-action{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 250px;
+                transform: translateY(50%);
+                height: 50px;
+                line-height: 78px;
+                font-weight: 700;
+
+                .button{
+                    width: 40px;
+                    height: 40px;
+                    float: right;
+                    margin: 5px;
+                    cursor: pointer;
+                    border-radius: 50%;
+                    box-shadow: 0px 3px 5px $shadow;
+
+                    &.phone{
+                        background: $pale-light url("../../../images/icons/Phone.svg") center center no-repeat;
+                    }
+
+                    &.website{
+                        background: $pale-light url("../../../images/icons/Website.svg") center center no-repeat;
+                    }
+
+                    &.route{
+                        background: $pale-light url("../../../images/icons/Route.svg") center center no-repeat;
+                    }
                 }
             }
         }
