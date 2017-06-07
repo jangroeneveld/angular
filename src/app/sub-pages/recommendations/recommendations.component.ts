@@ -7,21 +7,24 @@ import * as $ from 'typed.js'
     styleUrls: ['recommendations.component.scss']
 })
 export class RecommendationsComponent implements OnInit {
-    consturctor() {
+    blocks;
 
-    }
     ngOnInit() {
-        var blocks = document.getElementsByClassName('block');
+        this.blocks = document.getElementsByClassName('block');
 
-        for (var i = 0; i < blocks.length; i++) {
-            blocks[i].addEventListener('click', rescale);
+        for (var i = 0; i < this.blocks.length; i++) {
+            this.blocks[i].addEventListener('click', this.rescale);
         }
 
-        function rescale(event) {
-            for (var i = 0; i < event.target.parentElement.children.length; i++) {
-                event.target.parentElement.children[i].style = "flex-grow: 1";
-            }
-            event.target.style.flexGrow = 3;
+        
+    }
+    rescale = (event) => {
+        for (var i = 0; i < this.blocks.length; i++) {
+            this.blocks[i].style = "";
         }
+        for (var i = 0; i < event.target.parentElement.children.length; i++) {
+            event.target.parentElement.children[i].style = "flex-grow: 1";
+        }
+        event.target.style.flexGrow = 3;
     }
 }
