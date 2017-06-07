@@ -12,17 +12,16 @@ export class RecommendationsComponent implements OnInit {
     ngOnInit() {
         this.blocks = document.getElementsByClassName('block');
 
-        for (var i = 0; i < this.blocks.length; i++) {
+        for (let i = 0; i < this.blocks.length; i++) {
             this.blocks[i].addEventListener('click', this.rescale);
         }
-
-        
     }
+
     rescale = (event) => {
-        for (var i = 0; i < this.blocks.length; i++) {
+        for (let i = 0; i < this.blocks.length; i++) {
             this.blocks[i].style = "";
         }
-        for (var i = 0; i < event.target.parentElement.children.length; i++) {
+        for (let i = 0; i < event.target.parentElement.children.length; i++) {
             event.target.parentElement.children[i].style = "flex-grow: 1";
         }
         event.target.style.flexGrow = 3;
