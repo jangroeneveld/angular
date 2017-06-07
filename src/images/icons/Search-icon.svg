@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="8437.057 534.283 42.207 42.008">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fefcfb;
+      }
+    </style>
+  </defs>
+  <g id="Group_361" data-name="Group 361" transform="translate(8437.057 534.283)">
+    <path id="Path_450" data-name="Path 450" class="cls-1" d="M14.76,30.3A15.148,15.148,0,1,1,29.806,15.148,15.148,15.148,0,0,1,14.76,30.3Zm0-28.549a13.4,13.4,0,1,0,13.3,13.4A13.4,13.4,0,0,0,14.76,1.747Z" transform="translate(0.491 0)"/>
+    <rect id="Rectangle_675" data-name="Rectangle 675" class="cls-1" width="2.041" height="12.413" transform="translate(25.392 26.635) rotate(-45)"/>
+    <rect id="Rectangle_676" data-name="Rectangle 676" class="cls-1" width="17.834" height="5.731" rx="2.866" transform="translate(29.597 25.345) rotate(45)"/>
+  </g>
+</svg>

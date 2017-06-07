@@ -1,0 +1,24 @@
+.review-component{
+    float: left;
+    width: 100%;
+
+    .user-picture{
+        float: left;;
+        left: 0; top: 0;
+        width: 60px; height: 60px;
+        margin: 10px;
+        border-radius: 50%;
+    }
+
+    .rating{
+        float: left;
+        top: 0;
+        margin:10px;
+    }
+
+    .text{
+        width: 100%;
+        display: inline-block;
+        color: black;
+    }
+}

@@ -13,11 +13,13 @@ import 'hammerjs';
 
 //Components
 import { AppComponent } from './app.component';
+import { DetailsComponent } from './sub-pages/details/details.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { BookingsComponent } from './sub-pages/bookings/bookings.component';
 import { InformationComponent } from './sub-pages/information/information.component';
 import { RecommendationsComponent } from './sub-pages/recommendations/recommendations.component';
+import { ReviewComponent } from './sub-pages/details/review/review.component';
 import { SettingsComponent } from './sub-pages/settings/settings.component';
 
 //Services
@@ -28,11 +30,13 @@ import { UserService } from './services/user.service';
 @NgModule({
 	declarations: [
 		AppComponent,
+		DetailsComponent,
 		BookingsComponent,
 		HeaderComponent,
 		HomeComponent,
 		InformationComponent,
 		RecommendationsComponent,
+		ReviewComponent,
 		SettingsComponent
 	],
 	imports: [
