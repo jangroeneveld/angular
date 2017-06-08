@@ -1,0 +1,162 @@
+[
+    {
+        "title": "DeWalrus",
+        "subtitle": "Eten,drinkenenmeer…",
+        "imgUrl": "dewalrus.png",
+        "cuisine": "Nederlands",
+        "phone": "06-12345678",
+        "web": "https://www.dewalrus.nl"
+    },
+    {
+        "title": "PataNegra",
+        "subtitle": "Tapasymas",
+        "imgUrl": "patanegra.png",
+        "cuisine": "Tapas",
+        "phone": "06-12345679",
+        "web": "https://www.patanegra.nl"
+    },
+    {
+        "title": "SchuimenPluim",
+        "subtitle": "BierenKip",
+        "imgUrl": "schuimenpluim.png",
+        "cuisine": "Gevogelte",
+        "phone": "06-12345680",
+        "web": "https://www.schuimenpluim.nl"
+    },
+    {
+        "title": "HetHof",
+        "subtitle": "IusSuumQuique",
+        "imgUrl": "hethof.png",
+        "cuisine": "Nederlands",
+        "phone": "06-12345681",
+        "web": "https://www.hofsneek.nl"
+    },
+    {
+        "title": "OnderdeLinden",
+        "subtitle": "Lunch&diner",
+        "imgUrl": "onderdelinden.png",
+        "cuisine": "Nederlands",
+        "phone": "06-12345682",
+        "web": "https://www.restaurantonderdelinden.nl"
+    },
+    {
+        "title": "DeBommel",
+        "subtitle": "",
+        "imgUrl": "debommel.png",
+        "cuisine": "Nederlands",
+        "phone": "06-12345683",
+        "web": "https://www.debommel.nl"
+    },
+    {
+        "title": "DeKastanje",
+        "subtitle": "",
+        "imgUrl": "dekastanje.png",
+        "cuisine": "Internationaal",
+        "phone": "06-12345684",
+        "web": "https://www.dekastanjesneek.nl"
+    },
+    {
+        "title": "TexasSteakHouse",
+        "subtitle": "VleesenGrill",
+        "imgUrl": "texassteakhouse.png",
+        "cuisine": "Vlees",
+        "phone": "06-12345685",
+        "web": "https://www.texassteakhouse.sneek"
+    },
+    {
+        "title": "IlNuraghe",
+        "subtitle": "Pizza,pastaenLasagne",
+        "imgUrl": "ilnuraghe.png",
+        "cuisine": "Italiaans",
+        "phone": "06-12345686",
+        "web": "https://www.ilnuraghe.nl"
+    },
+    {
+        "title": "McDonalds",
+        "subtitle": "I'mlovingit",
+        "imgUrl": "mcdonalds.png",
+        "cuisine": "Vet",
+        "phone": "06-12345687",
+        "web": "https://www.mcdonalds.com"
+    },
+    {
+        "title": "Venezia",
+        "subtitle": "TrattoriaItalia",
+        "imgUrl": "venezia.png",
+        "cuisine": "Pizza",
+        "phone": "06-12345688",
+        "web": "https://www.pizzeriavenezia.nl"
+    },
+    {
+        "title": "SnackbarvanderWal",
+        "subtitle": "",
+        "imgUrl": "snackbarvanderwal.png",
+        "cuisine": "Snacks&friet",
+        "phone": "06-12345689",
+        "web": "https://www.vanderwalsnackbar.nl"
+    },
+    {
+        "title": "HenriettesFriethuis",
+        "subtitle": "",
+        "imgUrl": "henriettesfriethuis.png",
+        "cuisine": "Snacks&friet",
+        "phone": "06-12345690",
+        "web": "https://www.henriettesfriethuis.nl"
+    },
+    {
+        "title": "Istanbul",
+        "subtitle": "",
+        "imgUrl": "istanbul.png",
+        "cuisine": "Turks",
+        "phone": "06-12345691",
+        "web": "https://www.snackbaristanbul.com"
+    },
+    {
+        "title": "Cappadoccia",
+        "subtitle": "",
+        "imgUrl": "cappadoccia.png",
+        "cuisine": "Turks",
+        "phone": "06-12345692",
+        "web": "https://www.cappadoccia.nl"
+    },
+    {
+        "title": "SingKingLing",
+        "subtitle": "",
+        "imgUrl": "singkingling.png",
+        "cuisine": "Chinees",
+        "phone": "06-12345693",
+        "web": "https://www.singkingling.nl"
+    },
+    {
+        "title": "DeMangerie",
+        "subtitle": "Shoarmavreten",
+        "imgUrl": "demangerie.png",
+        "cuisine": "Snacks&friet",
+        "phone": "06-12345694",
+        "web": "https://www.mangeriesneek.nl"
+    },
+    {
+        "title": "KleinJava",
+        "subtitle": "Inodonesischgenieten",
+        "imgUrl": "kleinjava.png",
+        "cuisine": "Aziatisch",
+        "phone": "06-12345695",
+        "web": "https://www.kleinjava.nl"
+    },
+    {
+        "title": "LaBamba",
+        "subtitle": "",
+        "imgUrl": "labamba.png",
+        "cuisine": "Snacks&friet",
+        "phone": "06-12345696",
+        "web": "https://www.snackbarlabamba.nl"
+    },
+    {
+        "title": "Zoet&zo",
+        "subtitle": "",
+        "imgUrl": "zoetenzo.png",
+        "cuisine": "Zoet",
+        "phone": "06-12345697",
+        "web": "https://www.zoetenzo.com"
+    }
+]

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import * as $ from 'typed.js'
+import { RestaurantsService } from '../../../services/restaurants.service';
+
 
 @Component({
     selector: 'activities',
@@ -8,28 +10,45 @@ import * as $ from 'typed.js'
     styleUrls: ['activities.component.scss']
 })
 export class ActivitiesComponent implements OnInit {
-    blocks;
+    lastBlocks: any[] = [];
 
-    constructor(private route: ActivatedRoute){}
+    name:string;
+    items: any[] = [];
+    theArr: any[] = [];
+
+    constructor(private route: ActivatedRoute, private restaurantsService: RestaurantsService){
+        this.items = restaurantsService.getRestaurants();
+       
+        for(var i = 0; i < this.items.length ; i+=3) {
+            var row = [];
+            for(var x = 0; x < 3; x++) {
+                var value = this.items[i + x];
+                if (!value) {
+                    break;
+                }
+                row.push(value);
+            }
+            this.theArr.push(row);
+        }
+    }
+
     ngOnInit() {
         this.route.params.subscribe(params => {
             console.log(params);
         });
-
-        this.blocks = document.getElementsByClassName('block');
-
-        for (let i = 0; i < this.blocks.length; i++) {
-            this.blocks[i].addEventListener('click', this.rescale);
-        }
     }
 
     rescale = (event) => {
-        for (let i = 0; i < this.blocks.length; i++) {
-            this.blocks[i].style = "";
+        for(let i = this.lastBlocks.length -1; i >= 0; i--){
+            this.lastBlocks[i].style = "";
+            this.lastBlocks.pop();
         }
+        
         for (let i = 0; i < event.target.parentElement.children.length; i++) {
             event.target.parentElement.children[i].style = "flex-grow: 1";
+            this.lastBlocks.push(event.target.parentElement.children[i]);
         }
         event.target.style.flexGrow = 3;
+        this.lastBlocks.push(event.target);
     }
 }

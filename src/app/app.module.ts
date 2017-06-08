@@ -24,6 +24,7 @@ import { ReviewComponent } from './sub-pages/details/review/review.component';
 import { SettingsComponent } from './sub-pages/settings/settings.component';
 
 //Services
+import { CategoriesService } from './services/categories.service';
 import { PubSub } from '../shared/PubSub';
 import { RestaurantsService } from './services/restaurants.service';
 import { UserService } from './services/user.service';
@@ -50,6 +51,7 @@ import { UserService } from './services/user.service';
 		RouterModule.forRoot(rootRouterConfig, { useHash: true })
 	],
 	providers: [
+		CategoriesService,
 		PubSub,
 		RestaurantsService,
 		UserService

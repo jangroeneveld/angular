@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RestaurantsService } from '../../services/restaurants.service';
+import { CategoriesService } from '../../services/categories.service';
 import * as $ from 'typed.js';
 
 @Component({
@@ -14,9 +14,9 @@ export class RecommendationsComponent {
     items: any[] = [];
     theArr: any[] = [];
 
-    constructor(private restaurantsService: RestaurantsService){
-        this.items = restaurantsService.getRestaurants();
-       
+    constructor(private categoriesService: CategoriesService){
+        this.items = categoriesService.getCategories();
+
         for(var i = 0; i < this.items.length ; i+=3) {
             var row = [];
             for(var x = 0; x < 3; x++) {
