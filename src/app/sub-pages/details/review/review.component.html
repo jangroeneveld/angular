@@ -1,6 +1,6 @@
 <div class="review-component">
     <div class="user-picture" [style.background]="review.picture">
-
+        <div class="thumb" [class.positive]="review.rating >= 3" [class.negative]="review.rating < 3"></div>
     </div>
     <div class="rating">
         {{review.rating}}

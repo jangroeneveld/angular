@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'typed.js'
+import * as $ from 'typed.js';
+import { RestaurantsService } from '../../services/restaurants.service';
 
 @Component({
     selector: 'recommendations',
@@ -10,6 +11,10 @@ export class RecommendationsComponent implements OnInit {
     blocks;
     name:string;
     items: any[] = ["item1","item2","item3","item4","item5","item6","item7","item8","item9"];
+
+    constructor(private restaurantsService: RestaurantsService){
+        this.items = restaurantsService.getRestaurants();
+    }
 
     buildArr(theArr: any[]){
         debugger;

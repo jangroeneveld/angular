@@ -23,7 +23,7 @@
         </thead>
         <tbody>
             <tr *ngFor="let row of buildArr(items);let i = index">
-                <td *ngFor="let item of row">{{item}}</td>
+                <td *ngFor="let item of row">{{item.name}}</td>
             </tr>
         </tbody>
     </table>
