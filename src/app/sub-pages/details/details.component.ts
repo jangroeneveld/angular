@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
     selector: 'option-details',
@@ -8,7 +7,7 @@ import { Router, NavigationEnd } from '@angular/router';
 })
 export class DetailsComponent{
     details;
-    constructor(private router: Router){
+    constructor(){
         this.details = {
             name: "Restaurantnaam",
             quote: "Ik heb nog nooit zo lekker gegeten",
