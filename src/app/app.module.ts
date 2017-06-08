@@ -12,6 +12,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import 'hammerjs';
 
 //Components
+import { ActivitiesComponent } from './sub-pages/recommendations/activities/activities.component';
 import { AppComponent } from './app.component';
 import { DetailsComponent } from './sub-pages/details/details.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,7 +20,6 @@ import { HomeComponent } from './home/home.component';
 import { BookingsComponent } from './sub-pages/bookings/bookings.component';
 import { InformationComponent } from './sub-pages/information/information.component';
 import { RecommendationsComponent } from './sub-pages/recommendations/recommendations.component';
-import { ActivityComponent } from './sub-pages/recommendations/activity/activity.component';
 import { ReviewComponent } from './sub-pages/details/review/review.component';
 import { SettingsComponent } from './sub-pages/settings/settings.component';
 
@@ -30,6 +30,7 @@ import { UserService } from './services/user.service';
 
 @NgModule({
 	declarations: [
+		ActivitiesComponent,
 		AppComponent,
 		DetailsComponent,
 		BookingsComponent,
@@ -37,7 +38,6 @@ import { UserService } from './services/user.service';
 		HomeComponent,
 		InformationComponent,
 		RecommendationsComponent,
-		ActivityComponent,
 		ReviewComponent,
 		SettingsComponent
 	],

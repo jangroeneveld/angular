@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'typed.js'
 
 @Component({
-    selector: 'activity',
-    templateUrl: './activity.component.html',
-    styleUrls: ['activity.component.scss']
+    selector: 'activities',
+    templateUrl: './activities.component.html',
+    styleUrls: ['activities.component.scss']
 })
-export class ActivityComponent implements OnInit {
+export class ActivitiesComponent implements OnInit {
     blocks;
 
     ngOnInit() {
