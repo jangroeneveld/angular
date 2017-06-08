@@ -8,6 +8,26 @@ import * as $ from 'typed.js'
 })
 export class RecommendationsComponent implements OnInit {
     blocks;
+    name:string;
+    items: any[] = ["item1","item2","item3","item4","item5","item6","item7","item8","item9"];
+
+    buildArr(theArr: any[]){
+        debugger;
+        
+        var arrOfarr = [];
+        for(var i = 0; i < theArr.length ; i+=3) {
+            var row = [];
+            for(var x = 0; x < 3; x++) {
+                var value = theArr[i + x];
+                if (!value) {
+                break;
+                }
+                row.push(value);
+                }
+            arrOfarr.push(row);
+        }
+        return arrOfarr;
+    }
 
     ngOnInit() {
         this.blocks = document.getElementsByClassName('block');
