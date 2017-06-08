@@ -16,9 +16,7 @@ export class RecommendationsComponent implements OnInit {
         this.items = restaurantsService.getRestaurants();
     }
 
-    buildArr(theArr: any[]){
-        debugger;
-        
+    buildArr(theArr: any[]){        
         var arrOfarr = [];
         for(var i = 0; i < theArr.length ; i+=3) {
             var row = [];
