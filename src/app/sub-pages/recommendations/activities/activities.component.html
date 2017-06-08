@@ -18,8 +18,8 @@
             <span class="restaurant-name">{{item.title | uppercase}}</span>
             <div class="popup">
                 <a [routerLink]="'details/' + item.id"><div class="call-to-action goto"></div></a>
-                <div class="call-to-action web"></div>
-                <div class="call-to-action route"></div>
+                <a href="{{item.web}}" target="_blank"><div class="call-to-action web"></div></a>
+                <a href="tel:{{item.phone}}"><div class="call-to-action phone"></div></a>
                 <span class="restaurant-name-hover"><b>{{item.title | uppercase}}</b><br />{{item.subtitle | uppercase}}</span>
             </div>
         </div>
