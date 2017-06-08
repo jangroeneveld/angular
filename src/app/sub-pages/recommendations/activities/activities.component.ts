@@ -65,6 +65,6 @@ export class ActivitiesComponent implements OnInit {
     }
 
     openMaps = (event) => {
-        window.open("https://maps.google.com/maps?daddr=" + event.address ? event.address : event.title);
+        window.open("https://maps.google.com/maps?daddr=" + event.title);
     }
 }
