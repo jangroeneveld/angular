@@ -14,11 +14,11 @@
     </div>
 
     <div class="row" *ngFor="let row of theArr;let i = index">
-        <div class="block" (click)="rescale($event)" *ngFor="let item of row">
+        <div class="block" (click)="rescale($event)" [style.backgroundImage]="'url('+ item.imgUrl +')'" *ngFor="let item of row">
             <span class="restaurant-name">{{item.title}}</span>
             <div class="popup">
                 <a href="./"><div class="call-to-action phone"></div></a>
-                <span class="restaurant-name-hover"><b>{{item.title}}</b>{{item.subtitle}}</span>
+                <span class="restaurant-name-hover"><b>{{item.title}}</b><br />{{item.subtitle}}</span>
             </div>
         </div>
     </div>
