@@ -52,10 +52,38 @@
                     transform: translateY(-50%);
                 }
 
+                @keyframes type{ 
+                    from { width: 0; } 
+                } 
+
+                @keyframes type2{
+                    0%{width: 0;}
+                    50%{width: 0;}
+                    100%{ width: 100; } 
+                } 
+
+                @keyframes blink{
+                    to{opacity: .0;}
+                }
+
                 .main-image-text-title{
+                    color: $pale-light; 
+                    margin: 10px 0 0 10px;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 30em;
+                    animation: type 4s steps(50, end); 
                     font-weight: lighter;
                     font-size: 35px; 
-                    margin:5px;
+
+                    &:nth-child(2){
+                        animation: type2 8s steps(50, end);
+                    }
+
+                    span{
+                        animation: blink 1s infinite;
+                        
+                    }
                 }
 
                 hr{
@@ -106,7 +134,7 @@
             transition: background-image 0.3s;
 
             overflow: hidden;
-            border: 3px $pale-light solid;
+            border: 4px $pale-light solid;
             flex-grow: 1;
             transition: flex-grow 0.3s;
 

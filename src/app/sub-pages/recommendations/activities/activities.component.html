@@ -5,8 +5,8 @@
                 <div class="back">
                     <a href="./"><div class="back-button"></div></a>
                 </div>
-                <h1 class="main-image-text-title">WAT GA JE VANDAAG DOEN?</h1>
-                <span class="element">q</span>
+                <h1 class="main-image-text-title">WAT GA JE VANDAAG DOEN?<span>|</span></h1>
+                <span class="element"></span>
                 <hr>
                 <h3 class="main-image-text-subtitle">KIES HIERONDER DE CATEGORIE WAAROVER U MEER WILT WETEN</h3>
             </div>
@@ -15,10 +15,10 @@
 
     <div class="row" *ngFor="let row of theArr;let i = index">
         <div class="block" (click)="rescale($event)" [style.backgroundImage]="'url('+ item.imgUrl +')'" *ngFor="let item of row">
-            <span class="restaurant-name">{{item.title}}</span>
+            <span class="restaurant-name">{{item.title | uppercase}}</span>
             <div class="popup">
                 <a [routerLink]="'details/' + item.id"><div class="call-to-action phone"></div></a>
-                <span class="restaurant-name-hover"><b>{{item.title}}</b><br />{{item.subtitle}}</span>
+                <span class="restaurant-name-hover"><b>{{item.title | uppercase}}</b><br />{{item.subtitle | uppercase}}</span>
             </div>
         </div>
     </div>
