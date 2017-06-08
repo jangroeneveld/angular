@@ -200,9 +200,22 @@
                     transition: background-color 0.3s;
                 }
 
-                .call-to-action{
+                .call-to-action.goto{
                     background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Chevron_right_font_awesome.svg/120px-Chevron_right_font_awesome.svg.png');
                     background-size: 30px 30px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                .call-to-action.web{
+                    background-image: url('https://image.flaticon.com/icons/png/128/12/12195.png');
+                    background-size: 30px 30px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+
+                    .call-to-action.route{
+                    background-image: url('https://www.iconfinder.com/data/icons/pictype-free-vector-icons/16/location-alt-512.png');
+                    background-size: 30px;
                     background-position: center center;
                     background-repeat: no-repeat;
                 }

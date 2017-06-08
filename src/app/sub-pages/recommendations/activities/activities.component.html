@@ -17,7 +17,9 @@
         <div class="block" (click)="rescale($event)" [style.backgroundImage]="'url('+ item.imgUrl +')'" *ngFor="let item of row">
             <span class="restaurant-name">{{item.title | uppercase}}</span>
             <div class="popup">
-                <a [routerLink]="'details/' + item.id"><div class="call-to-action phone"></div></a>
+                <a [routerLink]="'details/' + item.id"><div class="call-to-action goto"></div></a>
+                <div class="call-to-action web"></div>
+                <div class="call-to-action route"></div>
                 <span class="restaurant-name-hover"><b>{{item.title | uppercase}}</b><br />{{item.subtitle | uppercase}}</span>
             </div>
         </div>
