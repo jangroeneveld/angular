@@ -12,7 +12,7 @@ export const rootRouterConfig: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'bookings', component: BookingsComponent },
-  { path: 'details', component: DetailsComponent },
+  { path: 'details/:id', component: DetailsComponent },
   { path: 'information', component: InformationComponent },
   { path: 'recommendations', component: RecommendationsComponent },
   { path: 'activities/:id', component: ActivitiesComponent },
