@@ -1,0 +1,185 @@
+@import '../../../../styles/colors.scss';
+
+.container{
+    width: 100vw;
+    max-width: 100%;
+
+    .main-image-background {
+        background: url(./images/main-image.jpg);
+        position: relative;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: auto;
+        height: 300px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(to bottom, $pale-light, $grey-dark);
+            opacity: .4; 
+        }
+
+        .text-box{
+            .main-image-text {
+                width: 100%;
+                height: 140%;
+                position: absolute;
+                top: 0;
+                left: 0px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                color: $pale-light;
+
+                .back-button{
+                    position: absolute;
+                    width: 70px;
+                    height: 70px;
+                    top: 44%;
+                    left: 30px;
+                    background: url("../../../images/icons/Arrow_left_white.svg") center center no-repeat;
+                    background-size: 40%;
+                    border: 1px solid $pale-light;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    transform: translateY(-50%);
+                }
+
+                .main-image-text-title{
+                    font-weight: lighter;
+                    font-size: 35px; 
+                    margin:5px;
+                }
+
+                hr{
+                    width:40%;
+                    color: $pale-light;
+                    background-color: $pale-light;
+                    height: 2px;
+                    border:0px
+                }
+
+                .main-image-text-subtitle{
+                    font-weight: lighter;
+                    font-size: 20px; 
+                    margin:5px;
+                }
+            } 
+        }
+    }
+
+    .row{
+        width: 100%;
+        display: flex;
+
+        .row:nth-child(even) .block:nth-child(odd){
+            flex-grow: 1;
+        }
+
+        .row:nth-child(even) .block:nth-child(even){
+            flex-grow: 2;
+        }
+
+        .row:nth-child(odd) .block:nth-child(odd){
+            flex-grow: 2;
+        }
+
+        .row:nth-child(odd) .block:nth-child(even){
+            flex-grow: 1;
+        }
+
+        .block{
+            display: inline-block;
+            top: 0;
+            left: 0;
+            position: relative;
+            height: 300px;
+            background: url('http://www.restauranthoteldelakei.nl/wp-content/uploads/2014/01/restaurant.jpeg') center bottom no-repeat;
+            background-size: cover;
+            transition: background-image 0.3s;
+
+            overflow: hidden;
+            border: 3px $pale-light solid;
+            flex-grow: 1;
+            transition: flex-grow 0.3s;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: inherit;
+                left: 0;
+                right: 0;
+                opacity: .5; 
+                background-image: linear-gradient(to bottom, $pale-light, $grey-dark);
+                transition: background-color 0.3s;
+            }
+
+            &:hover:before {
+                background-color: $pale-light;
+                opacity: 0;
+            }
+
+            &:hover .popup {
+                bottom: 0px;
+            }
+
+            .restaurant-name {
+                font-size: 25px;
+                font-weight: bold;
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                color: $pale-light;
+            }
+
+            .popup {
+                position: absolute;
+                bottom: -100px;
+                width: 100%;
+                height: 70px;
+                background-color: $pale-light;
+                transition: bottom 0.3s;
+                font-weight: 700;
+                font-size: 18pt;
+                box-sizing: border-box;
+
+                 .restaurant-name-hover {
+                    font-size: 19px;
+                    font-weight: normal;
+                    position: absolute;
+                    bottom: 10px;
+                    left: 10px;
+                    color: $grey-dark;
+                }
+
+                .call-to-action{
+                    box-shadow: 0px 0px 3px $grey-default;
+                    cursor: pointer;
+                    position: relative;
+                    float: right;
+                    width: 40px; height: 40px;
+                    top: -20px;
+                    background-color: $orange-dark;
+                    margin-right: 20px;
+                    border-radius: 50%;
+                    box-sizing: border-box;
+                    transition: background-color 0.3s;
+                }
+
+                .call-to-action{
+                    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Chevron_right_font_awesome.svg/120px-Chevron_right_font_awesome.svg.png');
+                    background-size: 30px 30px;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+}
