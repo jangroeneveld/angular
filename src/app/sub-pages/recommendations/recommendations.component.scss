@@ -52,9 +52,26 @@
                     transform: translateY(-50%);
                 }
 
+                @-webkit-keyframes typing { 
+                    from { 
+                        width: 0; 
+                    } 
+                }
+                @-webkit-keyframes blink-caret {
+                     50% { 
+                         border-color: transparent; 
+                    } 
+                }
+
                 .main-image-text-title{
-                    font-weight: lighter;
-                    font-size: 35px; 
+                    border-right: .1em solid black;
+                    width: 22ch;
+                    margin: 2em 1em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    -webkit-animation: typing 10s steps(21, end), blink-caret .5s step-end infinite alternate;
+                    font-weight: bold;
+                    font-size: 300%; 
                     margin:5px;
                 }
 
