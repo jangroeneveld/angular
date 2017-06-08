@@ -146,11 +146,10 @@
                 right: 0;
                 opacity: .5; 
                 background-image: linear-gradient(to bottom, $pale-light, $grey-dark);
-                transition: background-color 0.3s;
+                transition: opacity 0.3s;
             }
 
             &:hover:before {
-                background-color: $pale-light;
                 opacity: 0;
             }
 
