@@ -43,4 +43,8 @@ export class RecommendationsComponent {
         event.target.style.flexGrow = 3;
         this.lastBlocks.push(event.target);
     }
+
+    goBack = () => {
+        window.history.back();
+    }
 }

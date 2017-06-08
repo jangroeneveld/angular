@@ -5,8 +5,8 @@
         <div class="calls-to-action">
             Reserveren
             <a [href]="'tel:' + details.phone"><div class="button phone"></div></a>
-            <a (click)="openWebpage()"><div class="button website"></div></a>
-            <a (click)="openMaps()"><div class="button route" (click)="goToMaps()"></div></a>
+            <div (click)="openWebpage()" class="button website"></div>
+            <div (click)="openMaps()" class="button route"></div>
         </div>
     </div>
     <div class="section text-and-image">

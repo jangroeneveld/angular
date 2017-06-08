@@ -51,4 +51,20 @@ export class ActivitiesComponent implements OnInit {
         event.target.style.flexGrow = 3;
         this.lastBlocks.push(event.target);
     }
+
+    goBack = () => {
+        window.history.back();
+    }
+
+    openWebpage = (event) => {
+        if (!/^(f|ht)tps?:\/\//i.test(event.web)) {
+            window.open("http://" + event.web);
+        } else {
+            window.open(event.web);
+        }
+    }
+
+    openMaps = (event) => {
+        window.open("https://maps.google.com/maps?daddr=" + event.address ? event.address : event.title);
+    }
 }

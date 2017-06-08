@@ -3,7 +3,7 @@
         <div class="text-box">
             <div class="main-image-text">
                 <div class="back">
-                    <a href="./"><div class="back-button"></div></a>
+                    <div (click)="goBack()" class="back-button"></div>
                 </div>
                 <h1 class="main-image-text-title">WAT GA JE VANDAAG DOEN?<span>|</span></h1>
                 <span class="element"></span>
@@ -18,7 +18,8 @@
             <span class="restaurant-name">{{item.title | uppercase}}</span>
             <div class="popup">
                 <a [routerLink]="'details/' + item.id"><div class="call-to-action goto"></div></a>
-                <a href="{{item.web}}" target="_blank"><div class="call-to-action web"></div></a>
+                <div (click)="openWebpage(item)" class="call-to-action web"></div>
+                <div (click)="openMaps(item)" class="call-to-action route"></div>
                 <a href="tel:{{item.phone}}"><div class="call-to-action phone"></div></a>
                 <span class="restaurant-name-hover"><b>{{item.title | uppercase}}</b><br />{{item.subtitle | uppercase}}</span>
             </div>

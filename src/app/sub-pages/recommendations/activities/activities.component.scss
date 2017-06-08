@@ -187,7 +187,7 @@
                 }
 
                 .call-to-action{
-                    box-shadow: 0px 0px 3px $grey-default;
+                    box-shadow: 0px 3px 5px $shadow;
                     cursor: pointer;
                     position: relative;
                     float: right;
@@ -198,18 +198,23 @@
                     border-radius: 50%;
                     box-sizing: border-box;
                     transition: background-color 0.3s;
-                }
 
-                .call-to-action.goto{
-                    background: $orange-light url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Chevron_right_font_awesome.svg/120px-Chevron_right_font_awesome.svg.png") center center no-repeat;
-                    background-size: 30px 30px;
-                }
-                .call-to-action.web{
-                    background: $pale-light url("../../../images/icons/Website.svg") center center no-repeat;
-                }
+                    &.goto{
+                        background: $orange-light url("../../../images/icons/Arrow_right_orange.svg") center center no-repeat;
+                        background-size: 45%;
+                    }
 
-                .call-to-action.phone{
-                    background: $pale-light url("../../../images/icons/Phone.svg") center center no-repeat;
+                    &.web{
+                        background: $pale-light url("../../../images/icons/Website.svg") center center no-repeat;
+                    }
+
+                    &.route{
+                        background: $pale-light url("../../../images/icons/Route.svg") center center no-repeat;
+                    }
+
+                    &.phone{
+                        background: $pale-light url("../../../images/icons/Phone.svg") center center no-repeat;
+                    }
                 }
             }
         }
