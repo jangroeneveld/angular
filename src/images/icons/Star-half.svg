@@ -3,7 +3,9 @@
 <svg version="1.1" id="Laag_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 26.2 25" style="enable-background:new 0 0 26.2 25;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#9FB250;}
+	.st0{fill:#E7ECD2;}
+	.st1{fill:#9FB250;}
 </style>
-<path id="Path_789" class="st0" d="M13.1,0v20.3L5,25l2.2-9L0,9.5L9.5,9L13.1,0z"/>
+<path id="Path_505" class="st0" d="M13.1,0l3.7,9l9.5,0.5L19,16l2.2,9l-8.1-4.7L5,25l2.2-9L0,9.6L9.4,9L13.1,0z"/>
+<path id="Path_789" class="st1" d="M13.1,0v20.3L5,25l2.2-9L0,9.5L9.5,9L13.1,0z"/>
 </svg>
