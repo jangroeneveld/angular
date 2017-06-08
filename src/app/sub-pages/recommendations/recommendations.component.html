@@ -23,7 +23,7 @@ Typed.new(".element", {
         <div class="block" (click)="rescale($event)" [style.backgroundImage]="'url('+ item.imgUrl +')'" *ngFor="let item of row">
             <span class="restaurant-name">{{item.title}}</span>
             <div class="popup">
-                <a href="./"><div class="call-to-action phone"></div></a>
+                <a [routerLink]="'/activities/' + item.id"><div class="call-to-action phone"></div></a>
                 <span class="restaurant-name-hover"><b>{{item.title}}</b><br />{{item.subtitle}}</span>
             </div>
         </div>
