@@ -79,19 +79,19 @@
         width: 100%;
         display: flex;
 
-        .row:nth-child(even) .block:nth-child(odd){
+        &:nth-child(even) .block:nth-child(odd){
             flex-grow: 1;
         }
 
-        .row:nth-child(even) .block:nth-child(even){
+        &:nth-child(even) .block:nth-child(even){
             flex-grow: 2;
         }
 
-        .row:nth-child(odd) .block:nth-child(odd){
+        &:nth-child(odd) .block:nth-child(odd){
             flex-grow: 2;
         }
 
-        .row:nth-child(odd) .block:nth-child(even){
+        &:nth-child(odd) .block:nth-child(even){
             flex-grow: 1;
         }
 

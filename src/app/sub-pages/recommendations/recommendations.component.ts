@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as $ from 'typed.js';
 import { RestaurantsService } from '../../services/restaurants.service';
 
@@ -7,46 +7,40 @@ import { RestaurantsService } from '../../services/restaurants.service';
     templateUrl: './recommendations.component.html',
     styleUrls: ['recommendations.component.scss']
 })
-export class RecommendationsComponent implements OnInit {
-    blocks;
+export class RecommendationsComponent {
+    lastBlocks: any[] = [];
+
     name:string;
-    items: any[] = ["item1","item2","item3","item4","item5","item6","item7","item8","item9"];
+    items: any[] = [];
+    theArr: any[] = [];
 
     constructor(private restaurantsService: RestaurantsService){
         this.items = restaurantsService.getRestaurants();
-    }
-
-    buildArr(theArr: any[]){        
-        var arrOfarr = [];
-        for(var i = 0; i < theArr.length ; i+=3) {
+       
+        for(var i = 0; i < this.items.length ; i+=3) {
             var row = [];
             for(var x = 0; x < 3; x++) {
-                var value = theArr[i + x];
+                var value = this.items[i + x];
                 if (!value) {
-                break;
+                    break;
                 }
                 row.push(value);
-                }
-            arrOfarr.push(row);
-        }
-        return arrOfarr;
-    }
-
-    ngOnInit() {
-        this.blocks = document.getElementsByClassName('block');
-
-        for (let i = 0; i < this.blocks.length; i++) {
-            this.blocks[i].addEventListener('click', this.rescale);
+            }
+            this.theArr.push(row);
         }
     }
 
     rescale = (event) => {
-        for (let i = 0; i < this.blocks.length; i++) {
-            this.blocks[i].style = "";
+        for(let i = this.lastBlocks.length -1; i >= 0; i--){
+            this.lastBlocks[i].style = "";
+            this.lastBlocks.pop();
         }
+        
         for (let i = 0; i < event.target.parentElement.children.length; i++) {
             event.target.parentElement.children[i].style = "flex-grow: 1";
+            this.lastBlocks.push(event.target.parentElement.children[i]);
         }
         event.target.style.flexGrow = 3;
+        this.lastBlocks.push(event.target);
     }
 }

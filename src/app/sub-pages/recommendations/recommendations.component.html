@@ -13,101 +13,12 @@
         </div>
     </div>
 
-     <table class="table" id="myTable" class="table">
-        <thead>
-            <tr>
-                 <th>Item1</th>
-                 <th>Item2</th>
-                 <th>Item3</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let row of buildArr(items);let i = index">
-                <td *ngFor="let item of row">{{item.name}}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <div class="row">
-        <div class="block">
-            <span class="restaurant-name">CULTUUR</span>
+    <div class="row" *ngFor="let row of theArr;let i = index">
+        <div class="block" (click)="rescale($event)" *ngFor="let item of row">
+            <span class="restaurant-name">{{item.title}}</span>
             <div class="popup">
                 <a href="./"><div class="call-to-action phone"></div></a>
-                <span class="restaurant-name-hover"><b>CULTUUR</b><br />MUSEUMS ETC</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">SPORTACTIVITEITEN</span>
-            <div class="popup">
-                <a href="./"><div class="call-to-action phone"></div></a>
-                <span class="restaurant-name-hover"><b>SPORTACTIVITEITEN</b><br />IN DE NABIJE OMGEVING</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">DINEREN</span>
-            <div class="popup">
-                <a href="./"><div class="call-to-action phone"></div></a>
-                <span class="restaurant-name-hover">LEKKER DENEREN</span>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="block">
-            <span class="restaurant-name">CULTUUR</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>CULTUUR</b><br />MUSEUMS ETC</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">SPORTACTIVITEITEN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>SPORTACTIVITEITEN</b><br />IN DE NABIJE OMGEVING</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">DINEREN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover">LEKKER DENEREN</span>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="block">
-            <span class="restaurant-name">CULTUUR</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>CULTUUR</b><br />MUSEUMS ETC</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">SPORTACTIVITEITEN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>SPORTACTIVITEITEN</b><br />IN DE NABIJE OMGEVING</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">DINEREN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover">LEKKER DENEREN</span>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="block">
-            <span class="restaurant-name">CULTUUR</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>CULTUUR</b><br />MUSEUMS ETC</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">SPORTACTIVITEITEN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover"><b>SPORTACTIVITEITEN</b><br />IN DE NABIJE OMGEVING</span>
-            </div>
-        </div>
-        <div class="block">
-            <span class="restaurant-name">DINEREN</span>
-            <div class="popup">
-                <span class="restaurant-name-hover">LEKKER DENEREN</span>
+                <span class="restaurant-name-hover"><b>{{item.title}}</b>{{item.subtitle}}</span>
             </div>
         </div>
     </div>
