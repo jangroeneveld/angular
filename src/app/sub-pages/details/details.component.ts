@@ -19,7 +19,7 @@ export class DetailsComponent{
                 {
                     picture: "red",
                     name: "John Doe",
-                    rating: 5,
+                    rating: 2.9,
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit,  mollit anim id est laborum"
                 },{
                     picture: "yellow",
@@ -29,7 +29,7 @@ export class DetailsComponent{
                 },{
                     picture: "green",
                     name: "John Done",
-                    rating: 5,
+                    rating: 4.8,
                     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod"
                 },{
                     picture: "hotpink",
