@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 import * as $ from 'typed.js'
 
 @Component({
@@ -9,7 +10,12 @@ import * as $ from 'typed.js'
 export class ActivitiesComponent implements OnInit {
     blocks;
 
+    constructor(private route: ActivatedRoute){}
     ngOnInit() {
+        this.route.params.subscribe(params => {
+            console.log(params);
+        });
+
         this.blocks = document.getElementsByClassName('block');
 
         for (let i = 0; i < this.blocks.length; i++) {

@@ -15,7 +15,7 @@ export const rootRouterConfig: Routes = [
   { path: 'details', component: DetailsComponent },
   { path: 'information', component: InformationComponent },
   { path: 'recommendations', component: RecommendationsComponent },
-  { path: 'activity', component: ActivitiesComponent },
+  { path: 'activities/:id', component: ActivitiesComponent },
   { path: 'settings', component: SettingsComponent }
 ];
 
