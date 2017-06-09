@@ -5,10 +5,10 @@
                 <div class="back">
                     <div (click)="goBack()" class="back-button"></div>
                 </div>
-                <h1 class="main-image-text-title">WAT GA JE VANDAAG DOEN?<span>|</span></h1>
+                <h1 class="main-image-text-title">WAT GA JIJ <strong>VANDAAG</strong> DOEN?<span>|</span></h1>
                 <span class="element"></span>
                 <hr>
-                <h3 class="main-image-text-subtitle">KIES HIERONDER DE CATEGORIE WAAROVER U MEER WILT WETEN</h3>
+                <h3 class="main-image-text-subtitle">KIES HIERONDER DE CATEGORIE WAAROVER JE MEER WILT WETEN</h3>
             </div>
         </div>
     </div>
@@ -17,7 +17,7 @@
         <div class="block" (click)="rescale($event)" [style.backgroundImage]="'url('+ item.imgUrl +')'" *ngFor="let item of row">
             <span class="restaurant-name">{{item.title | uppercase}}</span>
             <div class="popup">
-                <a [routerLink]="'activities/' + item.id" fragment="top"><div class="call-to-action phone"></div></a>
+                <a [routerLink]="'activities/' + item.id" fragment="top"><div class="call-to-action goto"></div></a>
                 <span class="restaurant-name-hover"><b>{{item.title | uppercase}}</b><br />{{item.subtitle | uppercase}}</span>
             </div>
         </div>

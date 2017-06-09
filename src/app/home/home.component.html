@@ -1,24 +1,32 @@
 <div class="home-background"></div>
 <div class="home-container">
-    <div class="welcome"> WELKOM BIJ RCN DE POTTEN </div>
+    <div class="welcome"> WELKOM BIJ <strong> RCN DE POTTEN </strong> </div>
+    <hr class="hr-between">
     <div class="user-name">{{ user.mainUser.firstName | uppercase}} <strong> {{ user.mainUser.lastName | uppercase}} </strong></div>
-
+    <div class="arrow-more-down"></div>
+    
     <div class="block-container">
-        <div class="block block-recommendations" routerLink="/recommendations">
+        <div class="block block-recommendations">
             <div class="title">AANBEVELINGEN</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            <button type="button" class="goto-button" routerLink="/recommendations"><strong>GA</strong> VERDER</button>
         </div>
-        <div class="block block-recommendations" routerLink="/bookings">
+        <div class="block block-recommendations">
             <div class="title">BOEKINGEN</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            <button type="button" class="goto-button" routerLink="/bookings"><strong>GA</strong> VERDER</button>
         </div>
-        <div class="block block-recommendations" routerLink="/information">
+        <div class="block block-recommendations">
             <div class="title">GEGEVENS</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            <button type="button" class="goto-button" routerLink="/information"><strong>GA</strong> VERDER</button>
         </div>
-        <div class="block block-recommendations" routerLink="/settings">
+        <div class="block block-recommendations">
             <div class="title">INSTELLINGEN</div>
-            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</div>
+            <div class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+            <button type="button" class="goto-button" routerLink="/settings"><strong>GA</strong> VERDER</button>
         </div>
     </div>
+
+    
 </div>

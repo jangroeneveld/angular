@@ -20,7 +20,7 @@
             right: 0;
             bottom: 0;
             left: 0;
-            background-image: linear-gradient(to bottom, $pale-light, $grey-dark);
+            background: linear-gradient(to bottom, $gradient-top 20%,$gradient-bottom 80%);
             opacity: .4; 
         }
 
