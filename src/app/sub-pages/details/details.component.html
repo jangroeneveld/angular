@@ -1,9 +1,10 @@
 <div class="details-component">
     <div class="section head-image">
         <div class="previous-icon" (click)="goBack()"></div>
-        <div class="quote">{{details.quote}}</div>
+        <div class="quote"><strong>{{details.quote | uppercase}}</strong></div>
+        <div class="quote-submitter">HARRIE LASHKOV, 32 JAAR</div>
         <div class="calls-to-action">
-            Reserveren
+            RESERVEREN:
             <a [href]="'tel:' + details.phone"><div class="button phone"></div></a>
             <div (click)="openWebpage()" class="button website"></div>
             <div (click)="openMaps()" class="button route"></div>
@@ -11,14 +12,16 @@
     </div>
     <div class="section text-and-image">
         <div class="text">
-            <h1>{{details.name}}</h1>
+            <h1 class="activity-name">{{details.name | uppercase}}</h1>
             <br>
-            {{details.text}}
+            <p class="activity-description">{{details.text}}</p>
         </div>
         <div class="image"></div>
     </div>
     <div class="section reviews">
-        <div *ngFor="let review of details.reviews" class="review-container"><review [review]="review"></review></div>
+        <div *ngFor="let review of details.reviews" class="review-container">
+            <review [review]="review"></review>
+        </div>
     </div>
     <div class="section directions-and-contact">
         <div class="directions"></div>

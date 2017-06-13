@@ -2,10 +2,9 @@
 
 .details-component{
     margin-top: 50px;
-    background-color: $pale-medium;
+    background-color: $pale-light;
 
     .section{
-        box-shadow: 0px 3px 5px $shadow;
 
         &.head-image{
             background: linear-gradient(transparent, rgba(0,0,0,0.4)), url("../../../images/main-image.jpg") center center no-repeat;
@@ -29,11 +28,12 @@
 
             .quote{
                 position: absolute;
-                bottom: 30px; right: 30px;
+                bottom: 100px; right: 50px;
                 text-align: right;
                 font-size: 36pt;
                 vertical-align: bottom;
                 color: $pale-light;
+                text-shadow: 0px 2px 5px $grey-dark;
             
                 &:before{
                     content: "\"";
@@ -43,15 +43,24 @@
                     content: "\"";
                 }
             }
+
+            .quote-submitter{
+                position: absolute;
+                bottom: 60px; right: 70px;
+                text-align: right;
+                font-size: 20pt;
+                vertical-align: bottom;
+                color: $pale-light;
+            }
+
             .calls-to-action{
                 position: absolute;
                 bottom: 0;
-                right: 0;
-                width: 250px;
+                right: 55px;
+                width: 300px;
                 transform: translateY(50%);
                 height: 50px;
                 line-height: 78px;
-                font-weight: 700;
 
                 .button{
                     width: 40px;
@@ -80,17 +89,28 @@
         &.text-and-image{
             min-height: 300px;
             display: inline-block;
+            box-shadow: 10px 1px 10px $grey-light;
 
             .text{
                 width: 40%;
                 margin: 40px 5%;
                 float: left;
+
+                .activity-name{
+                    color: $grey-medium;
+                    margin: 0px;
+                }
+
+                .activity-description{
+                    color: $grey-medium;
+                    margin: 0px;
+                }
             }
 
             .image{
                 width: 40%;
                 margin: 40px 5%;
-                height: 200px;
+                height: 250px;
                 float: left;
                 background: url("../../../images/backgrounds/beach.jpg") center center no-repeat;
                 background-size: cover;

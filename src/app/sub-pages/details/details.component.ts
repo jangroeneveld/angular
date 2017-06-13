@@ -9,7 +9,7 @@ export class DetailsComponent{
     details;
     constructor(){
         this.details = {
-            name: "Restaurantnaam",
+            name: "PATA NEGRA - TAPAS RESTAURANT",
             quote: "Ik heb nog nooit zo lekker gegeten",
             phone: "06-12345678",
             website: "www.restaurant.nl",
